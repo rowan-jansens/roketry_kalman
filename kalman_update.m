@@ -1,4 +1,7 @@
 function [state, p_cov] = kalman_update(state, p_cov, measurement)
+
+    %https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/
+    
     global A B H R Q MU;
 
     predicted_state = predict_state(state, A, B);
